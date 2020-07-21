@@ -6,7 +6,7 @@ import CartList from './CartList';
 import { ProductConsumer } from '../../context';
 import CartTotals from './CartTotals';
 
-const Cart = () => {
+const Cart = (props) => {
     return (
         <section>
             <ProductConsumer>
@@ -27,6 +27,7 @@ const Cart = () => {
                                     cartTax={cartTax}
                                     cartTotal={cartTotal}
                                     clearCart={clearCart}
+                                    history={props.history}
                                 />
                             </React.Fragment>
                         )
